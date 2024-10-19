@@ -1,0 +1,55 @@
+{
+  "Routes": [
+    {
+      "DownstreamPathTemplate": "/api/categories/{id}",
+      "DownstreamScheme": "https",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 7039
+        }
+      ],
+      "UpstreamPathTemplate": "/gateway/categories/{id}",
+      "UpstreamHttpMethod": [ "Get", "Post", "Put", "Delete" ]
+    },
+    {
+      "DownstreamPathTemplate": "/api/products/{id}",
+      "DownstreamScheme": "https",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 7039
+        }
+      ],
+      "UpstreamPathTemplate": "/gateway/products/{id}",
+      "UpstreamHttpMethod": [ "Get", "Post", "Put", "Delete" ]
+    },
+    {
+      "DownstreamPathTemplate": "/api/stores/{id}",
+      "DownstreamScheme": "https",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 7039
+        }
+      ],
+      "UpstreamPathTemplate": "/gateway/stores/{id}",
+      "UpstreamHttpMethod": [ "Get", "Post", "Put", "Delete" ]
+    },
+    {
+      "DownstreamPathTemplate": "/api/customers/{id}",
+      "DownstreamScheme": "https",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 7223
+        }
+      ],
+      "UpstreamPathTemplate": "/gateway/customers/{id}",
+      "UpstreamHttpMethod": [ "Get", "Post", "Put", "Delete" ]
+    }
+  ],
+  "GlobalConfiguration": {
+    "BaseUrl": "https://localhost:7049"
+  }
+}
